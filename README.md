@@ -43,6 +43,10 @@ pnpm dev
 
 Open http://localhost:3000 in your browser to see the result. The page will automatically update as you make changes to the code.
 
+#### ENV
+
+You can add your custom rpc to the repo by using `RPC_URL` env var
+
 ### Building for Production
 To build the project for production, use the following command:
 
