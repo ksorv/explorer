@@ -39,3 +39,5 @@ export default async function SupplyPage() {
     </main>
   );
 }
+
+export const revalidate = 10;

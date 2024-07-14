@@ -128,3 +128,5 @@ export default async function StatsPage() {
     </main>
   );
 }
+
+export const revalidate = 10;
