@@ -16,6 +16,8 @@ interface HistoryProps {
 const HistoryPage: FC<HistoryProps> = async ({ params: { id = '' } }) => {
   const txns = await getAccountHistory(id);
 
+  if (!txns.length || !id) return null;
+
   return (
     <div>
       <h1 className='text font-bold p-4'>History</h1>
@@ -52,7 +54,9 @@ const HistoryPage: FC<HistoryProps> = async ({ params: { id = '' } }) => {
           </Card>
         ))}
       </div>
-      <p className='text-md font-semibold p-4 text-center'>More txns hidden due to API limits</p>
+      <p className='text-md font-semibold p-4 text-center'>
+        More txns hidden due to API limits
+      </p>
     </div>
   );
 };
