@@ -42,24 +42,28 @@ export const Search = () => {
   const validated: ValidatedValues = useMemo(() => {
     if (!deferredState) return;
 
-    const decoded = base58.decode(deferredState);
-    console.log(decoded);
-    // Account address
-    if (decoded.length === 32) {
-      return {
-        valid: true,
-        value: deferredState,
-        type: EntityTypes.Account,
-      };
-    }
+    try {
+      const decoded = base58.decode(deferredState);
+      console.log(decoded);
+      // Account address
+      if (decoded.length === 32) {
+        return {
+          valid: true,
+          value: deferredState,
+          type: EntityTypes.Account,
+        };
+      }
 
-    // Signature
-    else if (decoded.length === 64) {
-      return {
-        valid: true,
-        value: deferredState,
-        type: EntityTypes.Signature,
-      };
+      // Signature
+      else if (decoded.length === 64) {
+        return {
+          valid: true,
+          value: deferredState,
+          type: EntityTypes.Signature,
+        };
+      }
+    } catch {
+      //
     }
 
     return {
