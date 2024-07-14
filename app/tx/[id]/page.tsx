@@ -50,7 +50,7 @@ export default async function TxnPage({ params }: TxnProps) {
             </div>
             <div className='flex gap-2 flex-col justify-between sm:flex-row sm:gap-0 py-2 px-6'>
               <p>Confirmation Status</p>
-              <p>{status}</p>
+              <p className='capitalize'>{status}</p>
             </div>
             <div className='flex gap-2 flex-col justify-between sm:flex-row sm:gap-0 py-2 px-6'>
               <p>Confirmations</p>
