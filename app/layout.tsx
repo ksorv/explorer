@@ -27,13 +27,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <body className={cn(inter.variable)}>
-            <Header />
-            <main className='py-6 px-4 md:p-8 space-y-4 max-w-[1120px] mx-auto'>
-              <Search />
-              {children}
-            </main>
-          </body>
+          <Header />
+          {children}
         </ThemeProvider>
       </body>
     </html>

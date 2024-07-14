@@ -1,5 +1,5 @@
-import { Coin } from "@/types/coingecko/coin";
 import "server-only"
+import { Coin } from "@/types/coingecko/coin";
 
 enum CoinId {
   Solana = 'solana'

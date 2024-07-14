@@ -1,15 +1,10 @@
-import { lamportsToSol } from '@/utils/convert';
-import { clusterApiUrl, Connection } from '@solana/web3.js';
+import 'server-only';
 
-const rpc = process.env.RPC_URL || '';
+import { lamportsToSol } from '@/utils/convert';
+import { getConnection } from '@/lib/sol-connection';
 
 export async function getSupply() {
-  let url = rpc;
-  if (!url) {
-    url = clusterApiUrl('devnet').replace('api', 'explorer-api');
-  }
-
-  const connection = new Connection(url, 'finalized');
+ const connection = getConnection();
 
   const supply = await connection.getSupply();
 
