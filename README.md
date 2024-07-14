@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Explorer
+
+This is a Next.js project bootstrapped with `create-next-app`.
+
+## Project Overview
+
+The Explorer project is designed to showcase various features of Next.js, including server-side rendering, static site generation, and API routes. It provides a foundational structure for building scalable and high-performance web applications.
+
+This project is done for SuperTeam olympics, and is a solana explorer.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the development environment, follow these steps:
 
+### Prerequisites
+
+Ensure you have the following installed:
+- Node.js (>=14.x)
+- npm (>=6.x) or yarn (>=1.x)
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/ksorv/explorer.git
+cd explorer
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### Running the dev Server
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to see the result. The page will automatically update as you make changes to the code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
+To build the project for production, use the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
 
-## Learn More
+This will create an optimized production build in the .next folder.
 
-To learn more about Next.js, take a look at the following resources:
+#### Starting the Production Server
+After building the project, you can start the production server with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+# or
+yarn start
+# or
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Linting
+To run the linter, use:
 
-## Deploy on Vercel
+```bash
+npm run lint
+# or
+yarn lint
+# or
+pnpm lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Learn More
+To learn more about Next.js, take a look at the vercel website.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Deploy on Vercel
+The easiest way to deploy this Next.js app is to use the Vercel Platform
+
+#### License
+This project is licensed under the MIT License.
